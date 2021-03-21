@@ -1,4 +1,6 @@
-# googlesheetsfunct
+# Google Sheets Script
+
+# Projeto para ajudar com as planilhas do googleSheets, funções metodos etc.
 
 !(importante,
 em algum eu chamo minha planilha pelo id, que estão assim como abaixo.
@@ -9,4 +11,3 @@ então em algum momento vai encontrar wSh ou abData, Para sua planilha funcionar
 que criar a sua Variável.
 )!
 Projeto opensource fique a vontade para ajuda.
-Projeto para ajudar com as planilhas do googleSheets, funções metodos etc.
