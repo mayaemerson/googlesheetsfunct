@@ -1,0 +1,19 @@
+{
+  "name": "googlesheetsfunct",
+  "version": "1.0.0",
+  "description": "Tipos de codigos para uso nas planilha do googleSheets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayaemerson/googlesheetsfunct.git"
+  },
+  "author": "Emerson Maia  emersonmaia@me.com  fone +5562 991911266 (whats)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mayaemerson/googlesheetsfunct/issues"
+  },
+  "homepage": "https://github.com/mayaemerson/googlesheetsfunct#readme"
+}
