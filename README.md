@@ -1,13 +1,14 @@
 # Google Sheets Script
 
-# Projeto para ajudar com as planilhas do googleSheets, funções metodos etc.
+# Projeto para ajudar com as planilhas do googleSheets, funções metodos etc...
 
-!(importante,
+<strong>!(importante,
 em algum eu chamo minha planilha pelo id, que estão assim como abaixo.
 var idplan = "aqui vc coloca o id de sua planina" //mas vc pode fazer da forma que preferir para chama-la
 var wSh = SpreadsheetApp.openById (idplan)
 var abData = wSh.getSheetByName("data")
+para doc o mesmo acontece.
 então em algum momento vai encontrar wSh ou abData, Para sua planilha funcionar corretamente você vai ter
 que criar a sua Variável.
-)!
+)!<strong>
 Projeto opensource fique a vontade para ajuda.

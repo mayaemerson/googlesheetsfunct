@@ -10,7 +10,7 @@ function prepender(val,sheet){
 }
  
 function addContent2(){
- // Lembre-se o abData e minha variável que está na pasta idplan que vc deve criar a sua e nomear como você preferir.
+ // Lembre-se o abData e minha variável que está na pasta idplan que vc deve criar a sua e nomear como você preferir, ou chamar direto da sua planilha.
   const sheet = abData;
   let tempArr = [sheet.getLastRow()+1,'Novo Conteúdo'];
   prepender(tempArr,sheet);
