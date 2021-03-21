@@ -1,6 +1,6 @@
 function testSheet1(){
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
-  const sheet = ss.getActiveSheet();
+ 
+  const sheet = wSh
   const data = sheet.getDataRange();
   const values = data.getValues();
   values.forEach((val)=>{

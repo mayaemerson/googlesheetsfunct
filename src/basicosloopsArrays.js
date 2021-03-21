@@ -35,3 +35,11 @@ function outputone(){
   Logger.log(newArray);
  
 }
+
+
+Array.prototype.pSort = function(busca){
+  if(Procura == "") return false;
+  for (var Linha=0; Linha<this.length; Linha ++)
+  if (this[Linha]==Procura) return Linha;
+  return -1
+}

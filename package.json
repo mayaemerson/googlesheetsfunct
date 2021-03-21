@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mayaemerson/googlesheetsfunct/issues"
   },
-  "homepage": "https://github.com/mayaemerson/googlesheetsfunct#readme"
+  "homepage": "https://github.com/mayaemerson/googlesheetsfunct#readme",
+  "dependencies": {
+    "@types/google-apps-script": "^1.0.28"
+  }
 }
