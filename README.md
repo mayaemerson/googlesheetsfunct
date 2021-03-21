@@ -3,7 +3,7 @@
 # Projeto para ajudar com as planilhas do googleSheets, funções metodos etc...
 
 <strong>!(importante,
-em algum eu chamo minha planilha pelo id, que estão assim como abaixo.
+em algum momento eu chamo a minha planilha pelo id, que estão assim como abaixo.
 var idplan = "aqui vc coloca o id de sua planina" //mas vc pode fazer da forma que preferir para chama-la
 var wSh = SpreadsheetApp.openById (idplan)
 var abData = wSh.getSheetByName("data")
