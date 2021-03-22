@@ -20,7 +20,7 @@ function addtoDoc(){
 }
  
 function createmyDoc(){
-  let myName = 'Tester Docs ';
+  let myName = 'Testanto nome ';
   const doc = DocumentApp.create(myName);
   Logger.log(doc.getId());
   Logger.log(doc.getUrl());

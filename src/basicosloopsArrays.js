@@ -19,8 +19,8 @@ function outputone(){
   for(let q=0;q<10;q++){
     //let temp = `item ${q}`;
     const temp = {
-      'first' : 'Myname'+q,
-      'last' : 'Laster'+q
+      'first' : 'Carla'+q,
+      'last' : 'Souza'+q
     };
     myArray.push(temp);
   }
