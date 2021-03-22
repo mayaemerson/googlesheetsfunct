@@ -14,12 +14,13 @@ function onEdit(e){
 }
 
 /*
+aqui chamo só o dia
 a data e hora se precisar pode formatar exemplos na pasta 
 formatdatehora (os exemplos mostrado são para o horário Brasileiro)
 */
 function carimboDateHor(){
 
-  abExtra.getRange("C2").setFormula('=now()')
+  abExtra.getRange("C2").setFormula('=TODAY()')
     const lra0 = abExtra.getLastRow()
     const ftlinha = abExtra.getRange(2,3,lra0-1)
    
