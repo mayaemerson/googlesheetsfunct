@@ -11,6 +11,7 @@ function onEdit(e){
    
    dataVencimento()
    numerarId()
+   duplicates()
 }
 
 /*
