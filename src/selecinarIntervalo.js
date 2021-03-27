@@ -4,8 +4,10 @@
 
 function addColors(){
  
-  
-  const sheet = wSh.getSheets()[0];
+  // data é a aba da planilha
+ const SheetContacts = SpreadsheetApp.getActiveSpreadsheet()
+ const ss =  SheetContacts.getSheetByName("data");
+  const sheet = ss.getSheets()[0];
   let counter = 0;
   for(let i=1;i<51;i++){
     let backColor = 'green';

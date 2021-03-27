@@ -1,4 +1,4 @@
-function duplicates(){
+function colorirduplicates(){
 
 
   let values = abduplicates.getRange("A2:D").getValues()

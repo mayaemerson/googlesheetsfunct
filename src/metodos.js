@@ -1,14 +1,11 @@
 function arraysObj() {
-  /*onde esta abDta e o endereço da planilha estou chamando pelo id, mas vc pode chamar dentro da sua sheet, você vai ter que trocar essas duas informações para seu teste.
-exemplo eu chama em outra pasta
-var idplan = "aqui vc coloca o id de sua planina" mas vc pode fazer da forma que preferir para chama-la
-var wSh = SpreadsheetApp.openById (idplan)
-var abData = wSh.getSheetByName("data")*/
-
+// data é a aba da planilha
+ const SheetContacts = SpreadsheetApp.getActiveSpreadsheet()
+ const ss =  SheetContacts.getSheetByName("data");
   const myObj ={
-  'nome': abData.getRange(2,1,abData.getLastRow()).getValues(), 
-  'email': abData.getRange(2,2,abData.getLastRow()).getValues(),
-  'fone': abData.getRange(2,3,abData.getLastRow()).getValues(),
+  'nome': ss.getRange(2,1,ss.getLastRow()).getValues(), 
+  'email':ss.getRange(2,2,ss.getLastRow()).getValues(),
+  'fone': ss.getRange(2,3,ss.getLastRow()).getValues(),
 }
 Logger.log(myObj.nome)
 Logger.log(myObj.email)
