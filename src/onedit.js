@@ -53,9 +53,9 @@ const SheetContacts = SpreadsheetApp.getActiveSpreadsheet()
 const ss =  SheetContacts.getSheetByName("extras");
    const id = "1"
   ss.getRange("A2").setValue(id)
-  ss.getRange("A3").setFormula('=OFFSET(A2;-1;0)+1')
+  ss.getRange("A3").setFormula('=OFFSET(A3;-1;0)+1')
     const lra2 = ss.getLastRow()
     const ftlinha = ss.getRange(3,1,lra2-1)
    
-   ss.getRange("A2").copyTo(ftlinha)
+   ss.getRange("A3").copyTo(ftlinha)
 }

@@ -1,4 +1,4 @@
-function testSheet1(){
+function seleceinarTodoCoteudo(){
  
   // data é a aba da planilha
  const SheetContacts = SpreadsheetApp.getActiveSpreadsheet()
