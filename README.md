@@ -21,11 +21,7 @@ Espero que esse artigo ajude em algum momento.
 > JS  [Java script](https://www.javascript.com/)
 > Node [Node.Js](https://nodejs.org/en/)
  
-
-
-
- 
- <details><summary>Dica Importante</summary>
+<details><summary>Dica Importante</summary>
 
 <p>
 
@@ -108,30 +104,54 @@ Espero que esse artigo ajude em algum momento.
  
  ###### Com a planilha ativa você consegue pegar o id na barra de navegação como está na imagem acima, você só precisa do número que está em negrito, está imagem e só um exemplo você tem que pegar o id dá sua planilha.(Obs.: esse endereço não te leva para lugar nenhum poque é só um exemplo).
  
+ ![Isso é uma imagem](https://user-images.githubusercontent.com/57040825/175102916-c2be2b7b-a8b8-4106-83aa-c35f480e7c52.png)
+ 
+ ###### Acima temos como as abas foram nomeadas
+ 
  <sub>Exemplo para ID</sub>
  
  ***vamos usar*** 
  
+ **Importante vamos noear nossos arquivos códigos como _camelCase_**
+ 
  - idBd = Para o id dá planilha
- - sb = Para SpreadsheetApp Id
+ - ss = Para SpreadsheetApp Id
  - tb = Para aba
  
  ```javascript
        const idBd = "1CgcnfEIrCTL55H4tI5Lz-2abvfT_fBkIML_1PRYmnMk"
-       const sb = SpreadsheetApp.openById (idBd)
-       const tbAb = sb.getSheetByName("nome da aba")
- ```
+       const ss = SpreadsheetApp.openById (idBd)
  
- <sub>Exemplo para SpreadsheetApp</sub>
+       const data = ss.getSheetByName("data")
+       const bdText = ss.getSheetByName("bd_text")
+       const adNewRow = ss.getSheetByName("ad_new_row")
+       const duplicados = ss.getSheetByName("duplicados")
+       const extras = ss.getSheetByName("extras")
+ ```
  
  ***vamos usar*** 
  
- - ss = Para SpreadsheetApp
- - tb = Para aba
+ - ssS = Para SpreadsheetApp
+ - tbS = Para aba
+ 
+ <sub>Exemplo para SpreadsheetApp</sub>
+ 
+ ###### O procedimento para SpreadsheetApp, e o mesmo usado para o ID.
  
  ```javascript
-       const ss = SpreadsheetApp.getActiveSpreadsheet()
-       const tbAb = ss.getSheetByName("nome da aba")
+       
+       const ssS = SpreadsheetApp.getActiveSpreadsheet()
+       const tbS = ssS.getSheetByName("nome da aba")
+ ```
+ 
+ 
+ ```javascript
+       var tbDt = data
+       var tbNr = adNewRow
+       var tbTt = bdText
+       var tbNr = adNewRow
+       var tbDp = duplicados
+       var tbEx = extras
  ```
  
  **Obs.: Essas informações e para quando estiver olhando para as pastas dos códigos você saiba com estamos chamando.**
@@ -140,33 +160,119 @@ Espero que esse artigo ajude em algum momento.
 
 </details>
  
+ 
+ <details><summary>Revisa permissão</summary>
+
+<p>
+
+#### Dá permissão para acesso a planilha
+
+![Isso é uma imagem](https://user-images.githubusercontent.com/57040825/175099923-aab7e52f-9eb1-42e3-90a6-ccfc15d7449a.png)
+
+</p>
+
+</details>
+ 
+ 
  <details><summary>Códigos Script</summary>
 
 <p>
 
 #### Códigos Js
-
-```ruby
-   puts "Hello World"
+ 
+<sup>Nome do Usuário</sup>
+```javascript
+   const nomeUser = Session.getEffectiveUser().getUsername()
+   Logger.log(nomeUser)
 ```
 
-</p>
-
-</details>
-
-<details><summary>Formulas</summary>
-
-<p>
-
-#### We can hide anything, even code!
-
-```ruby
-   puts "Hello World"
+ 
+ <sup>Add na primeria linha e na última</sup>
+```javascript
+ const prepender = (val,sheet) =>{
+  sheet.insertRowBefore(1);
+  let cloneArr = val.map((x)=>x);
+  cloneArr.push('START');
+  const range = sheet.getRange(1,1,1,cloneArr.length);
+  range.setValues([cloneArr]);
+}
+ 
+const addContent = () =>{
+ 
+  const sheet = tbNr;
+  let tempArr = [sheet.getLastRow()+1,'Novo Conteúdo'];
+  prepender(tempArr,sheet);
+  tempArr.push('Fim');
+  sheet.appendRow(tempArr);
+ 
+}
 ```
+ 
+ <sup>Add before start after e na última linha</sup>
+```javascript
+  const addContentTwo = () => {
+  const sheet = tbNr
+  Logger.log(sheet);
+  let startPos = 5;
+  let startVal = sheet.getRange(startPos,1).getValue();
+  sheet.getRange(startPos,1).setValue(startVal + ' START');
+  sheet.insertRowAfter(startPos);
+  sheet.getRange(startPos+1,1).setValue('AFTER');
+  sheet.insertRowBefore(startPos);
+  sheet.getRange(startPos,1).setValue('BEFORE');
+  let tempArr = [sheet.getLastRow()+1,'test',2,'hello world'];
+  sheet.appendRow(tempArr);
+}
 
-</p>
+```
+ <sup>Colorir dubplicados</sup>
+```javascript
+  const colorirduplicates = () =>
+  let values = tbDp.getRange("A2:D").getValues()
+  let arr=[]
+  let repeat=[]
+  let row=2
+//importante o array no js começa pelo número zero
+  values.map((elem,ind,obj)=>{
+    if(elem[0] != ""){
+      if(arr.indexOf(elem[0]) === -1){
+        arr.push(elem[0])
+      }else{
+         repeat.push(elem[0])
+      }
+    }
+   })// fim primeira parte
 
-</details>
+  values.map((elem,ind,obj)=>{
+    if(elem[0] != ""){
+      if(repeat.indexOf(elem[0]) !== -1){
+        tbDp.getRange(`A${row}:D${row}`).setBackground('pink')
+      }else{
+        tbDp.getRange(`A${row}:D${row}`).setBackground('white')
+      }
+      }
+    row++
+  })
+}
+```
+ 
+ <sup>Copiar colar até a última linha, aqui criando um id</sup>
+```javascript
+  let lra = tbEx. getLastRow()
+
+   function numerarId(){
+   const id = "1"
+   tbEx.getRange("A2").setValue(id)
+   tbEx.getRange("A3").setFormula('=OFFSET(A3;-1;0)+1')
+   const lra2 = tbEx.getLastRow()
+   const ftlinha = tbEx.getRange(3,1,lra-1)
+   tbEx.getRange("A3").copyTo(ftlinha)
+}
+```
+ <p>
+
+
+
 
 
 [^1]: Projeto opensource fique a vontade para ajuda.
