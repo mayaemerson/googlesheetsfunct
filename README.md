@@ -1,6 +1,6 @@
 # Google Sheets Script
 
-> Projeto para ajudar com as planilhas do googleSheets, funções metodos etc...
+###### Projeto para ajudar com as planilhas do googleSheets, funções metodos etc...
 
 <strong>
 
@@ -12,16 +12,26 @@ Espero que esse artigo ajude em algum momento.
 
 <strong>
 
-> *** Documentação *** [Apps Script](https://www.google.com/script/start/)
-> *** GitHub *** [Google Apps Script](https://github.com/topics/google-apps-script)
+> Documentação [Apps Script](https://www.google.com/script/start/)
+> GitHub  [Google Apps Script](https://github.com/topics/google-apps-script)
 
 ## Dica importante
 
  
 > Coisas que podem deixar suas planilhas mais pesadas
+ 
+- Não deixe colunas e linhas em branco em suas planilhas.
+ 
+|   A          |  B             |    C          |
+| :---         |     :---:      |          ---: |
+| 1   | name     | name     |
+| 2   | git diff | git diff |
+| 3   | git diff | git diff |
+| 4   | git diff | git diff |
+| 5   |  | |
+| 6   |  |  |
 
 
 
 
-
-[^-]: Projeto opensource fique a vontade para ajuda.
+[^1]: Projeto opensource fique a vontade para ajuda.
