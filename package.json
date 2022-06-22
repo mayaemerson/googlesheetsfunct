@@ -4,6 +4,11 @@
   "description": "Tipos de codigos para uso nas planilha do googleSheets",
   "main": "index.js",
   "scripts": {
+    "glogin": "clasp login",
+    "glogout": "clasp logout",
+    "gpull": "clasp pull",
+    "gpush": "clasp push",
+    "gstart": "clasp push --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,7 +21,8 @@
     "url": "https://github.com/mayaemerson/googlesheetsfunct/issues"
   },
   "homepage": "https://github.com/mayaemerson/googlesheetsfunct#readme",
-  "dependencies": {
-    "@types/google-apps-script": "^1.0.28"
+  "devDependencies": {
+    "@google/clasp": "^2.4.1",
+    "@types/google-apps-script": "^1.0.49"
   }
 }
