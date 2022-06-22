@@ -15,12 +15,14 @@ Espero que esse artigo ajude em algum momento.
 > Documentação [Apps Script](https://www.google.com/script/start/)
 > GitHub  [Google Apps Script](https://github.com/topics/google-apps-script)
 
-## Dica importante
+ 
+ <details><summary>Dica Importante</summary>
 
+<p>
+
+#### Coisas que podem deixar suas planilhas mais pesadas!
  
-> Coisas que podem deixar suas planilhas mais pesadas
- 
-- Não deixe colunas e linhas em branco em suas planilhas.
+  - Não deixe colunas e linhas em branco em suas planilhas.
  
 |   A          |  B             |    C          |
 | :---         |     :---:      |          ---: |
@@ -30,6 +32,14 @@ Espero que esse artigo ajude em algum momento.
 | 4   | git diff | git diff |
 | 5   |  | |
 | 6   |  |  |
+| 7   |  | |
+| 8   |  |  |
+
+
+
+</p>
+
+</details>
 
 
 
