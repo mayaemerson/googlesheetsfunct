@@ -143,7 +143,7 @@ Espero que esse artigo ajude em algum momento.
        const ssS = SpreadsheetApp.getActiveSpreadsheet()
        const tbS = ssS.getSheetByName("nome da aba")
  ```
- 
+ ***Chamada das abas*** 
  
  ```javascript
        var tbDt = data
