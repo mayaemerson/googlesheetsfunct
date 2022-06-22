@@ -80,12 +80,32 @@ Espero que esse artigo ajude em algum momento.
 
 </details>
  
- <details><summary>COMO ALIMENTAR A PLANILHA VIA CÓDIGO</summary>
+ <details><summary>Planilha com script</summary>
 
 <p>
 
-#### COMO ACESSAR A PLANILHA PARA PODER ENVIAR INFORMAÇÕES LER DADOS DELETAR DADOS...
-
+#### Neste documento a maioria dos nossos códigos serão com script.
+###### Teremos também muitos códigos como fórmulas.
+ 
+ > Nossas chamadas da planilha com script.
+ 
+###### Para chamar nossa planilha e suas abas iremos usar o id dá planilha e também sua chamada local como a planilha ativa (SpreadsheetApp), as abas chama pelo nome da aba.
+ 
+ - id
+ - SpreadsheetApp
+ - Aba
+ 
+ 
+ 
+ ```javascript
+ 
+   var id = "número do id"
+ 
+ ```
+ 
+ 
+ 
+ 
 
 
 </p>
