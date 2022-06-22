@@ -273,12 +273,94 @@ const addContent = () =>{
    tbEx.getRange("A3").copyTo(ftlinha)
 }
 ```
+
+ <sup>API que não requer autenticação</sup>
+
+ <sub>Url exemplo</sub>
+
+```javascript
+// set the endpoint
+     const url = 'https://dever.example.com/v3/abc';
+ 
+// call the API
+     const response = UrlFetchApp.fetch(url);
+
+```
+
+ <sup>API requer autenticação</sup>
+
+ <sub>Url exemplo</sub>
+
+```javascript
+// include the API Key
+const API_KEY = 'XXXXXXXXXXXXXXX';
+ 
+// set the endpoint
+const url = 'https://developers.example.com/v1/abc';
+ 
+// call the API
+const response = UrlFetchApp.fetch(url + '&api_key=' + API_KEY);
+
+
+```
+
+ <sup>API requer chave no cabeçalho</sup>
+
+ <sub>Url exemplo</sub>
+
+```javascript
+// include the API Key
+const API_KEY = 'XXXXXXXXXXXXXXX';
+ 
+// set the endpoint
+const url = 'https://developers.example.com/v1/abc';
+ 
+// set the params object
+const params = {
+    headers: {
+      Authorization: API_KEY
+    }
+  }
+ 
+// call the API
+const response = UrlFetchApp.fetch(url,params);
+
+
+
+```
+
+ <sup>Às vezes, a palavra “Autorização” é substituída por uma palavra diferente, dependendo de como os designers da API configuraram a API</sup>
+
+<sub>Por exemplo, a API Teachable usa a palavra “apiKey”</sub>
+
+ <sub>Url exemplo</sub>
+
+```javascript
+// include the API Key
+const API_KEY = 'XXXXXXXXXXXXXXX';
+ 
+// set the endpoint
+const url = 'https://developers.example.com/v1/abc';
+ 
+// set the params object
+const params = {
+    headers: {
+      apiKey: API_KEY
+    }
+  }
+ 
+// call the API
+const response = UrlFetchApp.fetch(url,params);
+
+```
+
+
  </p>
 
 
 </details>
 
-<details><summary>Funcções</summary>
+<details><summary>Funções</summary>
 
 <p>
 
