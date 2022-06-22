@@ -12,8 +12,15 @@ Espero que esse artigo ajude em algum momento.
 
 <strong>
 
-> Documentação [Apps Script](https://www.google.com/script/start/)
-> GitHub  [Google Apps Script](https://github.com/topics/google-apps-script)
+> Documentação [Doc Apps Script](https://www.google.com/script/start/)
+> GitHub  [Google Apps Script Git](https://github.com/topics/google-apps-script)
+> Ajuda  [Ajuda do editores](https://support.google.com/docs#topic=1382883)
+
+> JS  [Java script](https://www.javascript.com/)
+> Node [Node.Js](https://nodejs.org/en/)
+ 
+
+
 
  
  <details><summary>Dica Importante</summary>
@@ -75,7 +82,7 @@ Espero que esse artigo ajude em algum momento.
 | 4   | git diff | git diff |
 
  ## *Essas, boas práticas ira ajuda sua planilha ter um rendimento muito melhor.*
-
+ ###### Essas informações são casos de uso utilizada em meus códigos, e são práticas minhas, não significa que estão corretas ou não, significa que é uma prática que gosto de utilizar.
 </p>
 
 </details>
@@ -84,8 +91,8 @@ Espero que esse artigo ajude em algum momento.
 
 <p>
 
-#### Neste documento a maioria dos nossos códigos serão com script.
-###### Teremos também muitos códigos como fórmulas.
+#### [documentação](https://developers.google.com/apps-script).
+
  
  > Nossas chamadas da planilha com script.
  
@@ -95,7 +102,7 @@ Espero que esse artigo ajude em algum momento.
  - SpreadsheetApp
  - Aba
  
- ![Isso é uma imagem](https://user-images.githubusercontent.com/57040825/175060745-6cb0d21e-0f3c-47ca-b891-b79c7de5c839.png)
+ ![Isso é uma imagem](https://user-images.githubusercontent.com/57040825/175077705-f25e10df-4398-46d5-a67f-4e885e9adc47.png)
  
  ###### Com a planilha ativa você consegue pegar o id na barra de navegação como está na imagem acima, você só precisa do número que está em negrito, está imagem e só um exemplo você tem que pegar o id dá sua planilha.(Obs.: esse endereço não te leva para lugar nenhum poque é só um exemplo).
  
@@ -124,12 +131,40 @@ Espero que esse artigo ajude em algum momento.
        const ss = SpreadsheetApp.getActiveSpreadsheet()
        const tbAb = ss.getSheetByName("nome da aba")
  ```
+ 
+ **Obs.: Essas informações e para quando estiver olhando para as pastas dos códigos você saiba com estamos chamando.**
+
+</p>
+
+</details>
+ 
+ <details><summary>Códigos Script</summary>
+
+<p>
+
+#### Códigos Js
+
+```ruby
+   puts "Hello World"
+```
 
 </p>
 
 </details>
 
+<details><summary>Formulas</summary>
 
+<p>
+
+#### We can hide anything, even code!
+
+```ruby
+   puts "Hello World"
+```
+
+</p>
+
+</details>
 
 
 [^1]: Projeto opensource fique a vontade para ajuda.
