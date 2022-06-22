@@ -143,7 +143,7 @@ Espero que esse artigo ajude em algum momento.
        const ssS = SpreadsheetApp.getActiveSpreadsheet()
        const tbS = ssS.getSheetByName("nome da aba")
  ```
- ***Chamada das abas*** 
+ 
  
  ```javascript
        var tbDt = data
@@ -181,6 +181,7 @@ Espero que esse artigo ajude em algum momento.
 #### Códigos Js
  
 <sup>Nome do Usuário</sup>
+
 ```javascript
    const nomeUser = Session.getEffectiveUser().getUsername()
    Logger.log(nomeUser)
@@ -188,6 +189,7 @@ Espero que esse artigo ajude em algum momento.
 
  
  <sup>Add na primeria linha e na última</sup>
+
 ```javascript
  const prepender = (val,sheet) =>{
   sheet.insertRowBefore(1);
@@ -209,6 +211,7 @@ const addContent = () =>{
 ```
  
  <sup>Add before start after e na última linha</sup>
+
 ```javascript
   const addContentTwo = () => {
   const sheet = tbNr
@@ -226,6 +229,7 @@ const addContent = () =>{
 
 ```
  <sup>Colorir dubplicados</sup>
+
 ```javascript
   const colorirduplicates = () =>
   let values = tbDp.getRange("A2:D").getValues()
@@ -253,10 +257,10 @@ const addContent = () =>{
       }
     row++
   })
-}
 ```
  
  <sup>Copiar colar até a última linha, aqui criando um id</sup>
+
 ```javascript
   let lra = tbEx. getLastRow()
 
@@ -269,10 +273,28 @@ const addContent = () =>{
    tbEx.getRange("A3").copyTo(ftlinha)
 }
 ```
- <p>
+ </p>
+
+
+</details>
+
+<details><summary>Funcções</summary>
+
+<p>
+
+#### Aqui vamos ter funções logo logo!
+
+```javascript
+   const em = "Em"
+   const br = "Breve"
+
+   console.log(em+" "+br)
+```
+
+</p>
+
+</details>
 
 
 
 
-
-[^1]: Projeto opensource fique a vontade para ajuda.
