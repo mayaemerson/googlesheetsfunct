@@ -1,7 +1,7 @@
-function colorirduplicates(){
+const colorirduplicates = () => {
 
 
-  let values = abduplicates.getRange("A2:D").getValues()
+  let values = tbDp.getRange("A2:D").getValues()
   let arr=[]
   let repeat=[]
   let row=2
@@ -19,9 +19,9 @@ function colorirduplicates(){
   values.map((elem,ind,obj)=>{
     if(elem[0] != ""){
       if(repeat.indexOf(elem[0]) !== -1){
-        abduplicates.getRange(`A${row}:D${row}`).setBackground('pink')
+        tbDp.getRange(`A${row}:D${row}`).setBackground('pink')
       }else{
-        abduplicates.getRange(`A${row}:D${row}`).setBackground('white')
+        tbDp.getRange(`A${row}:D${row}`).setBackground('white')
       }
       }
     row++
