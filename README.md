@@ -1,6 +1,6 @@
 # Google Sheets Script
 
-# Projeto para ajudar com as planilhas do googleSheets, funções metodos etc...
+> Projeto para ajudar com as planilhas do googleSheets, funções metodos etc...
 
 <strong>
 O Google Apps é um conjunto de aplicações, Gmail, Calendário, Drive, Docs e Formulários.
