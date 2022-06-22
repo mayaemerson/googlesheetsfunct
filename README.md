@@ -95,18 +95,35 @@ Espero que esse artigo ajude em algum momento.
  - SpreadsheetApp
  - Aba
  
+ ![Isso é uma imagem](https://user-images.githubusercontent.com/57040825/175060745-6cb0d21e-0f3c-47ca-b891-b79c7de5c839.png)
  
+ ###### Com a planilha ativa você consegue pegar o id na barra de navegação como está na imagem acima, você só precisa do número que está em negrito, está imagem e só um exemplo você tem que pegar o id dá sua planilha.(Obs.: esse endereço não te leva para lugar nenhum poque é só um exemplo).
+ 
+ <sub>Exemplo para ID</sub>
+ 
+ ***vamos usar*** 
+ 
+ - idBd = Para o id dá planilha
+ - sb = Para SpreadsheetApp Id
+ - tb = Para aba
  
  ```javascript
- 
-   var id = "número do id"
- 
+       const idBd = "1CgcnfEIrCTL55H4tI5Lz-2abvfT_fBkIML_1PRYmnMk"
+       const sb = SpreadsheetApp.openById (idBd)
+       const tbAb = sb.getSheetByName("nome da aba")
  ```
  
+ <sub>Exemplo para SpreadsheetApp</sub>
  
+ ***vamos usar*** 
  
+ - ss = Para SpreadsheetApp
+ - tb = Para aba
  
-
+ ```javascript
+       const ss = SpreadsheetApp.getActiveSpreadsheet()
+       const tbAb = ss.getSheetByName("nome da aba")
+ ```
 
 </p>
 
