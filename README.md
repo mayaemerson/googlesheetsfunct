@@ -274,6 +274,17 @@ const addContent = () =>{
 }
 ```
 
+ <sup>Ocultar Coluna</sup>
+
+```javascript
+  const hideColum = () => {
+  data.getRange('C:C').activate();
+  data.hideColumns(data.getActiveRange().getColumn(), data.getActiveRange().getNumColumns());
+
+}
+
+```
+
  <sup>API que não requer autenticação</sup>
 
  <sub>Url exemplo</sub>
