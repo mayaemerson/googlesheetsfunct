@@ -398,6 +398,9 @@ function SUNDAYSMONTH ( m, y )  {
 */
    
 ```
+#### Exemplo de uso
+
+![Isso é uma imagem](https://user-images.githubusercontent.com/57040825/177204115-27ebfe0e-2409-47e5-99d4-b069dc691bb8.png)
 
 </p>
 
