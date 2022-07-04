@@ -375,13 +375,28 @@ const response = UrlFetchApp.fetch(url,params);
 
 <p>
 
-#### Aqui vamos ter funções logo logo!
+<sub>Função que retorna quantidades de domingo no mês selecionado</sub>
 
 ```javascript
-   const em = "Em"
-   const br = "Breve"
+function SUNDAYSMONTH ( m, y )  {
+  const days = new Date( y,m,0 ).getDate();
+  const sundays = [ (8 - (new Date( m +'/01/'+ y ).getDay())) % 7 ];
+  for ( let i = sundays[0] + 7; i <= days; i += 7 ) {
+    sundays.push( i );
+  }
 
-   console.log(em+" "+br)
+  const sundayTotal = sundays.length
+
+  return sundayTotal
+}
+
+
+/* CASO DE USO 
+
+=SUNDAYSMONTH("AQUI COLUNA MES";"AQUI COLUNA ANO")
+
+*/
+   
 ```
 
 </p>
