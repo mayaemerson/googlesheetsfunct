@@ -365,7 +365,7 @@ const response = UrlFetchApp.fetch(url,params);
 
 ```
 
- <sup> quebrar linha no msg.box </sup>
+ <sup> Quebrar linha no msg.box </sup>
 
 ```javascript
 
@@ -413,6 +413,20 @@ function SUNDAYSMONTH ( m, y )  {
 #### Exemplo de uso
 
 ![Isso é uma imagem](https://user-images.githubusercontent.com/57040825/177204115-27ebfe0e-2409-47e5-99d4-b069dc691bb8.png)
+
+
+<sub>Sequence</sub>
+<strong>
+A função SEQUENCE é uma função útil no Planilhas Google. É uma maneira poderosa de gerar listas numeradas.
+<strong>
+
+# =SEQUENCE(rows, columns, start, step)
+# =SEQUENCE(4;1;4;0)
+# =SEQUENCE(1,5)
+
+> Documentação [Doc Sequence](https://bit.ly/maiasequence)
+
+
 
 </p>
 
