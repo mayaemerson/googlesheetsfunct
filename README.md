@@ -269,7 +269,7 @@ let sheet = spreadsheet.getSheetByName('consulta_cep');
 //Busca o cep na base dos correios
 const getAddressByCep = () =>
 {       sheet.getRange("D5").clear
-        let searchCep = sheet.getRange("C3").getValue().replace("-","") // busca pelo cep na celula c2
+        let searchCep = sheet.getRange("C3").getValue().replace("-","") 
         let cep = searchCep
         let reqs = UrlFetchApp.fetch(`https://viacep.com.br/ws/${cep}/json/`)
         let ress = JSON.parse(reqs.getContentText())
@@ -530,6 +530,37 @@ Retorna o tamanho de uma string.
   NÚM.CARACT(texto)
   
  ```
+</p>
+
+</details>
+
+
+<details><summary>Atualizar Chrome</summary>
+
+<p>
+
+<sub>Atualizar chrome no linux debian </sub>
+
+ ```
+ #Se você não tiver um Google Chrome instalado em seu computador, siga o artigo abaixo para instalar
+ #http://askubuntu.com/questions/510056/how-to-install-google-chrome
+ #Abaixo estão as etapas para atualizar o google chrome
+
+ sudo apt update
+
+ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+ sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+ sudo apt-get update 
+ sudo apt-get install google-chrome-stable
+
+
+ # Update
+
+ sudo apt-get --only-upgrade install google-chrome-stable
+  
+ ```
+
+
 </p>
 
 </details>
