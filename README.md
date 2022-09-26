@@ -415,14 +415,14 @@ function SUNDAYSMONTH ( m, y )  {
 ![Isso é uma imagem](https://user-images.githubusercontent.com/57040825/177204115-27ebfe0e-2409-47e5-99d4-b069dc691bb8.png)
 
 
-<sub>Sequence</sub>
-<strong>
+#### Sequence
+<sub>
 A função SEQUENCE é uma função útil no Planilhas Google. É uma maneira poderosa de gerar listas numeradas.
-<strong>
+</sub>
 
-# =SEQUENCE(rows, columns, start, step)
-# =SEQUENCE(4;1;4;0)
-# =SEQUENCE(1,5)
+=SEQUENCE(rows, columns, start, step)
+=SEQUENCE(4;1;4;0)
+=SEQUENCE(1,5)
 
 > Documentação [Doc Sequence](https://bit.ly/maiasequence)
 
