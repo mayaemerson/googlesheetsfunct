@@ -432,14 +432,14 @@ A função SEQUENCE é uma função útil no Planilhas Google. É uma maneira po
  
  
  ```
- #### Sequence
+ #### Sort
 <sub>
  você tenha uma lista de 10 itens na coluna A da sua Planilha e queira classificá-los do menor para o maior.
 </sub>
  
  ###### exemplo:
  
-> Documentação [Doc Sequence](https://bit.ly/docsortsheets)
+> Documentação [Doc Sort](https://bit.ly/docsortsheets)
 
  ```
  Sintaxe :
@@ -454,6 +454,7 @@ A função SEQUENCE é uma função útil no Planilhas Google. É uma maneira po
 
 
   =SORT(A1:A10,LEN(A1:A10),TRUE)
+
   O primeiro intervalo é a coluna a ser classificada, neste exemplo A1:A10
   O segundo intervalo é a coluna de classificação, ou seja, a coluna usada para determinar a ordem de classificação.
   Neste exemplo, uso a função LEN para converter a coluna A em uma matriz de números, com base na contagem de caracteres. Por exemplo, "fazer" se torna 2.
@@ -464,6 +465,28 @@ A função SEQUENCE é uma função útil no Planilhas Google. É uma maneira po
  ![Isso é uma imagem](https://user-images.githubusercontent.com/57040825/192324206-7afacd76-ef10-427c-b7b4-0825d1c2ec6a.png)
 
 
+ #### Len
+<sub>
+Retorna o tamanho de uma string.
+</sub>
+ 
+ ###### exemplo:
+ 
+> Documentação [Doc Sort](https://bit.ly/maialensheets)
+
+ ```
+ Sintaxe :
+  Uso de exemplo
+  NÚM.CARACT(A2)
+
+  NÚM.CARACT("lorem ipsum")  
+
+  Sintaxe:
+  NÚM.CARACT(texto)
+  
+ ```
+ 
+ 
 
 
 
