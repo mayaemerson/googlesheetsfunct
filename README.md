@@ -423,13 +423,27 @@ A função SEQUENCE é uma função útil no Planilhas Google. É uma maneira po
 ###### exemplo:
  
 > Documentação [Doc Sequence](https://bit.ly/maiasequence)
+> Documentação [Doc Matriz](https://bit.ly/maiasheetsmatriz)
+> Documentação [Doc Lambda](https://bit.ly/maiasheetslambda)
 
  ```
- Sintaxe : =SEQUENCE(rows, columns, start, step)
+ Maneira antiga:
+
+ =ArrayFormula(SEQUENCE(4) & " of " & SEQUENCE(4,1,4,0))
  
-=SEQUENCE(4;1;4;0)
-=SEQUENCE(1,5)
+ ** A fórmula de matriz acima não é fácil de entender ou modificar, a menos que você esteja familiarizado com a função de sequência.
  
+ Nova maneira com Lambda.
+
+ Aqui está o equivalente BYROW para gerar a mesma lista:
+
+ =BYROW(SEQUENCE(4),LAMBDA(row,row&" of "&4))
+
+ Ele cria uma matriz de números de 1 a 4 , que a função lambda interna transforma, linha por linha, em 1 de 4, 2 de 4, etc.
+
+ Além de a fórmula ser mais sucinta, acho que é mais fácil de entender e modificar.
+
+ Agora, só precisamos alterar o "4" para um número diferente duas vezes, e é fácil identificar os números a serem alterados.
  
  ```
  #### Sort
@@ -472,7 +486,7 @@ Retorna o tamanho de uma string.
  
  ###### exemplo:
  
-> Documentação [Doc Sort](https://bit.ly/maialensheets)
+> Documentação [Doc Len](https://bit.ly/maialensheets)
 
  ```
  Sintaxe :
@@ -485,12 +499,6 @@ Retorna o tamanho de uma string.
   NÚM.CARACT(texto)
   
  ```
- 
- 
-
-
-
-
 </p>
 
 </details>
