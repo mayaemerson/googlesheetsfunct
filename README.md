@@ -365,6 +365,35 @@ const response = UrlFetchApp.fetch(url,params);
 
 ```
 
+ <sup>Consulta CEP</sup>
+
+```javascript
+let app = SpreadsheetApp;
+let spreadsheet = app.getActiveSpreadsheet();
+let sheet = spreadsheet.getSheetByName('consulta CEP');
+
+//Busca o cep na base dos correios
+const getAddressByCep = () =>
+{       sheet.getRange("D5").clear
+        let searchCep = sheet.getRange("C3").getValue().replace("-","") // busca pelo cep na celula c2
+        let cep = searchCep
+        let reqs = UrlFetchApp.fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        let ress = JSON.parse(reqs.getContentText())
+
+        const retCep = `
+        ${'Rua '} ${ ress.logradouro} 
+        ${'Complemento '} ${ ress.complemento} 
+        ${'Bairro '} ${ ress.bairro} 
+        ${'Cidade'} ${ ress.localidade}
+        ${'Uf'} ${ ress.uf}
+        `
+
+         sheet.getRange("D5").setValue(retCep)
+         
+    }
+
+
+```
 
  </p>
 
