@@ -264,7 +264,7 @@ const addContent = () =>{
 
 let app = SpreadsheetApp;
 let spreadsheet = app.getActiveSpreadsheet();
-let sheet = spreadsheet.getSheetByName('consulta CEP');
+let sheet = spreadsheet.getSheetByName('consulta_cep');
 
 //Busca o cep na base dos correios
 const getAddressByCep = () =>
