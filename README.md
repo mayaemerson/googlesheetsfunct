@@ -479,12 +479,12 @@ const response = UrlFetchApp.fetch(url,params);
     
     getMin(array)
 
+```
  
 
  </p>
-
-
 </details>
+
 
 <details><summary>Script (JS) - Doc</summary>
 
