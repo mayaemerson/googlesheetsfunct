@@ -174,7 +174,7 @@ Espero que esse artigo ajude em algum momento.
 </details>
  
  
- <details><summary>Script Sheets</summary>
+ <details><summary>Script (JS) - Sheets</summary>
 
 <p>
 
@@ -413,7 +413,7 @@ const response = UrlFetchApp.fetch(url,params);
 
 </details>
 
-<details><summary>Script Doc</summary>
+<details><summary>Script (JS) - Doc</summary>
 
 <p>
 
