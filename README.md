@@ -432,7 +432,7 @@ const response = UrlFetchApp.fetch(url,params);
 const writedocument = () => {
   const name = (new Date()).getTime();
   const id = 'aqui vai o id do documento';
-  cpmst doc = DocumentApp.openById(id);
+  const doc = DocumentApp.openById(id);
   let body = doc.getBody();
   body.appendParagraph('Hello World '+ name);
 
