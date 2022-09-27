@@ -430,10 +430,10 @@ const response = UrlFetchApp.fetch(url,params);
 //Escrevendo no body documento
 
 const writedocument = () => {
- var name = (new Date()).getTime();
-  var id = 'aqui vai o id do documento';
-  var doc = DocumentApp.openById(id);
-  var body = doc.getBody();
+  const name = (new Date()).getTime();
+  const id = 'aqui vai o id do documento';
+  cpmst doc = DocumentApp.openById(id);
+  let body = doc.getBody();
   body.appendParagraph('Hello World '+ name);
 
 }
