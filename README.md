@@ -406,6 +406,79 @@ const response = UrlFetchApp.fetch(url,params);
     }
 
 ```
+
+ <sup> Js reverse string</sup>
+
+###### Se você precisar reverter uma string, essa é a função...
+
+```javascript
+
+    const stringReversed = (text: string) => text.split('')
+                           .reverse().join('');
+```
+
+ <sup> Scroll to top</sup>
+
+###### Está função faz sua página rolar para o top ou início, independente de qual posição estiver no scroll...
+
+```javascript
+
+    const scrollTop = () => window.scrollTo(0,0)
+    scrollTop()
+
+```
+ <sup> Remover intens duplicados</sup>
+
+###### Para remover intens duplicados de um array...
+
+```javascript
+
+    const array = [0,1,2,2,4,5,5,6,7,7,9,9,9]
+
+    const removeItems = (array) => [...new Set(array)]
+    removeItems(array)
+    
+```
+ <sup> Retornar valor aleatório no array</sup>
+
+###### Retornar algum valor randomico no array....
+
+```javascript
+
+    const array = [0,1,2,3,4,5,6,7,8]
+
+    const getrandom = (array) => array[Math.floor(Math.random() * array.lenght)]
+
+    getrandom(array)
+    
+```
+
+ <sup> Retornar maior valor no array</sup>
+
+###### Essa função retorna o maior valor de um array....
+
+```javascript
+
+    const array = [0,1,2,3,4,5,6,7,8,38,345,56798]
+
+    const getMax = (array, n = 1) => [...array].sort((a, b)) => b - a).slice(0, n);
+    
+    getMax(array)
+
+```
+
+ <sup> Retornar menor valor no array</sup>
+
+###### Essa função retorna o menor valor de um array....
+
+```javascript
+
+    const array = [0,1,2,3,4,5,6,7,8,38,345,56798]
+
+    const getMin = (array, n = 1) => [...array].sort((a, b)) => a - b).slice(0, n);
+    
+    getMin(array)
+
  
 
  </p>
