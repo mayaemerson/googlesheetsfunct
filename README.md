@@ -174,7 +174,7 @@ Espero que esse artigo ajude em algum momento.
 </details>
  
  
- <details><summary>Códigos Script</summary>
+ <details><summary>Script Sheets</summary>
 
 <p>
 
@@ -184,7 +184,6 @@ Espero que esse artigo ajude em algum momento.
 
 ```javascript
    const nomeUser = Session.getEffectiveUser().getUsername()
-   Logger.log(nomeUser)
 ```
 
  
@@ -421,11 +420,26 @@ const response = UrlFetchApp.fetch(url,params);
 <sub>Script para os documentos do google </sub>
 
  ```javascript
- 
+
+ const creatDoc = () => {
  const nameArq = (new Date()).getTime()
  const doc =DocumentApp.create('Teste_' + nameArq)
 
-  
+ }
+
+//Escrevendo no body documento
+
+const writedocument = () => {
+ var name = (new Date()).getTime();
+  var id = 'aqui vai o id do documento';
+  var doc = DocumentApp.openById(id);
+  var body = doc.getBody();
+  body.appendParagraph('Hello World '+ name);
+
+}
+
+
+
  ```
 
 
