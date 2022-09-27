@@ -414,6 +414,27 @@ const response = UrlFetchApp.fetch(url,params);
 
 </details>
 
+<details><summary>Script Doc</summary>
+
+<p>
+
+<sub>Script para os documentos do google </sub>
+
+ ```javascript
+ 
+ const nameArq = (new Date()).getTime()
+ const doc =DocumentApp.create('Teste_' + nameArq)
+
+  
+ ```
+
+
+</p>
+
+</details>
+
+
+
 <details><summary>Funções</summary>
 
 <p>
