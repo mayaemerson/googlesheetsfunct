@@ -480,6 +480,65 @@ const response = UrlFetchApp.fetch(url,params);
     getMin(array)
 
 ```
+
+<sup> Criar comentários em diversos intervalos</sup>
+
+###### Esse codigo possibilita criar vários comentários em diversos intervalos e informar o usuário que criou....
+
+```javascript
+function addCommentToCells() {
+  const ui = SpreadsheetApp.getUi();
+  const userEmail = Session.getActiveUser().getEmail();
+
+  // Verifica se o e-mail do usuário está disponível
+  if (!userEmail) {
+    ui.alert('Não foi possível identificar o e-mail do usuário. O script será encerrado.');
+    return;
+  }
+
+  // Solicita os intervalos de células
+  let response = ui.prompt('Digite os intervalos de células para adicionar o comentário, separados por vírgula (por exemplo, A2:A7, C6:C17, Z5:Z40)');
+  const rangesInput = response.getResponseText();
+  if (rangesInput === '') {
+    ui.alert('Intervalos não especificados. O script será encerrado.');
+    return;
+  }
+
+  // Solicita o texto do comentário
+  response = ui.prompt('Digite o texto do comentário');
+  const commentText = response.getResponseText();
+  if (commentText === '') {
+    ui.alert('Texto do comentário não especificado. O script será encerrado.');
+    return;
+  }
+
+  // Processa cada intervalo e adiciona o comentário
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  const ranges = rangesInput.split(',').map(range => range.trim());
+
+  ranges.forEach(rangeStr => {
+    const range = sheet.getRange(rangeStr);
+    const comments = range.getNotes();
+
+    for (let i = 0; i < comments.length; i++) {
+      comments[i][0] = commentText + " (comentado por: " + userEmail + ")";
+    }
+
+    range.setNotes(comments);
+  });
+
+  ui.alert('Comentários adicionados aos intervalos especificados.');
+}
+
+function onOpen() {
+  const ui = SpreadsheetApp.getUi();
+  ui.createMenu('Comentários Personalizados')
+      .addItem('Adicionar Comentário', 'addCommentToCells')
+      .addToUi();
+}
+    
+
+```
  
 
  </p>
